@@ -1,0 +1,408 @@
+{% extends 'mama_fua/base.html'%}
+
+{% block title %}CheckOut{% endblock %}
+
+{% block content %}
+
+
+<section class="position-relative py-20 bg-light overflow-hidden">
+  <div class="position-relative container">
+    <h2 class="mb-14 text-5xl font-bold">Checkout</h2>
+    <div class="col-12 col-lg-7">
+      <form action="">
+        <div class="d-flex mb-10 align-items-center">
+          <span class="flex-shrink-0 d-inline-flex me-8 align-items-center justify-content-center rounded-circle bg-info-light text-white" style="width: 48px; height: 48px;">1</span>
+          <h5 class="mb-0">Laundry Basket Pickup</h5>
+        </div>
+        <div class="mb-12">
+          <div class="mb-12">
+          <div class="mb-2 py-3 px-8 bg-white rounded-pill">
+            <div class="d-flex flex-wrap align-items-center">
+              <label class="d-inline-flex mb-1 pe-4 py-2 align-items-center" for="">
+                <input type="radio" name="deliveryType" value="" checked="">
+                <span class="ms-4 fw-bold">Standard Pickup</span>
+              </label>
+              <p class="order-last mb-0 col-12 col-sm-auto ps-4 small text-secondary text-center">2-3 Business Hours</p>
+              <span class="order-sm-last ms-auto text-info fw-bold">ksh. 20</span>
+            </div>
+          </div>
+          <div class="py-3 px-8 bg-white rounded-pill">
+            <div class="d-flex flex-wrap align-items-center">
+              <label class="d-inline-flex mb-1 pe-4 py-2 align-items-center" for="">
+                <input type="radio" name="deliveryType" value="">
+                <span class="ms-4 fw-bold">I will Drop it Myself at the shop</span>
+              </label>
+              <span class="order-sm-last ms-auto text-info fw-bold">Free</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="d-flex mb-10 align-items-center">
+          <span class="flex-shrink-0 d-inline-flex me-8 align-items-center justify-content-center rounded-circle bg-info text-white" style="width: 48px; height: 48px;">2</span>
+          <h5 class="mb-0">Shipping informations</h5>
+        </div>
+        <div class="mb-12">
+          <div class="row mb-10">
+            <div class="col-12 col-md-6 mb-10 mb-md-0">
+              <label class="form-label" for="">First name</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="">Last name</label>
+              <input class="form-control" type="text">
+            </div>
+          </div>
+          <div class="mb-10">
+            <label class="form-label" for="">Hostel</label>
+            <input class="form-control" type="text">
+          </div>
+          <div class="mb-10">
+            <label class="form-label" for="">House No.</label>
+            <input class="form-control" type="text">
+          </div>
+        </div>
+        <div class="d-flex mb-10 align-items-center">
+          <span class="flex-shrink-0 d-inline-flex me-8 align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 48px; height: 48px;">3</span>
+          <h5 class="mb-0">Shipping methods</h5>
+        </div>
+        <div class="mb-12">
+          <div class="mb-2 py-3 px-8 bg-white rounded-pill">
+            <div class="d-flex flex-wrap align-items-center">
+              <label class="d-inline-flex mb-1 pe-4 py-2 align-items-center" for="">
+                <input type="radio" name="deliveryType" value="" checked="">
+                <span class="ms-4 fw-bold">Standard delivery</span>
+              </label>
+              <p class="order-last mb-0 col-12 col-sm-auto ps-4 small text-secondary text-center">2-3 Business Hours</p>
+              <span class="order-sm-last ms-auto text-info fw-bold">ksh. 20</span>
+            </div>
+          </div>
+          <div class="py-3 px-8 bg-white rounded-pill">
+            <div class="d-flex flex-wrap align-items-center">
+              <label class="d-inline-flex mb-1 pe-4 py-2 align-items-center" for="">
+                <input type="radio" name="deliveryType" value="">
+                <span class="ms-4 fw-bold">I will pick it Myself</span>
+              </label>
+              <span class="order-sm-last ms-auto text-info fw-bold">Free</span>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mb-10 align-items-center">
+          <span class="flex-shrink-0 d-inline-flex me-8 align-items-center justify-content-center rounded-circle bg-danger-light text-white" style="width: 48px; height: 48px;">4</span>
+          <h5 class="mb-0">Payment</h5>
+        </div>
+        <div>
+          <div class="row mb-10">
+            <div class="col-12 col-sm-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentType" value="" checked="">
+                <label class="form-check-label">Mpesa</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentType" value="" checked="">
+                <label class="form-check-label">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-10">
+            <label class="form-label" for="">Phone Number</label>
+            <input class="form-control" type="text">
+          </div>
+          <div class="mb-10">
+            <label class="form-label" for="">Mpesa Name</label>
+            <input class="form-control" type="text">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="d-lg-none">
+      <div class="py-16 px-6 px-md-14 bg-white">
+        <div class="d-flex mb-12 align-items-center">
+          <h3 class="mb-0">Services summary</h3>
+          <span class="flex-shrink-0 d-inline-flex ms-4 align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 32px; height: 32px;">5</span>
+        </div>
+        <div class="mb-12 pb-16 border-bottom">
+          <div class="row mb-8 align-items-center">
+            <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+              <img class="img-fluid" style="height: 168px; object-fit: contain;" src="https://i.ibb.co/qpgTwSf/blanket.png" alt="blanket">
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="d-flex justify-content-between">
+                <div class="pe-2">
+                  <h3 class="mb-2 lead fw-bold">Blankets</h3>
+                  <p class="mb-8 text-secondary">Wash & Fold</p>
+                </div>
+                <span class="lead text-info fw-bold">ksh. 300</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                  </button>
+                  <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-8 align-items-center">
+            <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+              <img class="img-fluid" style="height: 168px; object-fit: contain;" src="https://i.ibb.co/dBLWkm1/suit.png" alt="suit">
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="d-flex justify-content-between">
+                <div class="pe-2">
+                  <h3 class="mb-2 lead fw-bold">Suits</h3>
+                  <p class="mb-8 text-secondary">Wash & Iron</p>
+                </div>
+                <span class="lead text-info fw-bold">ksh. 500</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                  </button>
+                  <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-8 align-items-center">
+            <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+              <img class="img-fluid" style="height: 168px; object-fit: contain;" src="https://i.ibb.co/kSr0JYx/jacket.png" alt="jacket">
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="d-flex justify-content-between">
+                <div class="pe-2">
+                  <h3 class="mb-2 lead fw-bold">Jackets</h3>
+                  <p class="mb-8 text-secondary">Wash & Fold</p>
+                </div>
+                <span class="lead text-info fw-bold">ksh. 50</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                  </button>
+                  <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-8 align-items-center">
+            <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+              <img class="img-fluid" style="height: 168px; object-fit: contain;" src="https://i.ibb.co/g74FB2K/Polo.png" alt="Polo">
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="d-flex justify-content-between">
+                <div class="pe-2">
+                  <h3 class="mb-2 lead fw-bold">Polo</h3>
+                  <p class="mb-8 text-secondary">Iron & Fold</p>
+                </div>
+                <span class="lead text-info fw-bold">ksh. 50</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                  </button>
+                  <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                  <button class="btn px-0 py-2">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="mb-12">
+          <div class="mb-10">
+            <div class="py-3 px-10 bg-light rounded-pill">
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold">Subtotal</span>
+                <span class="fw-bold">$89.67</span>
+              </div>
+            </div>
+            <div class="py-3 px-10 rounded-pill">
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold">Shipping</span>
+                <span class="fw-bold">$11.00</span>
+              </div>
+            </div>
+            <div class="py-3 px-10 bg-light rounded-pill">
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold">Tax</span>
+                <span class="fw-bold">$0.00</span>
+              </div>
+            </div>
+            <div class="py-3 px-10 rounded-pill">
+              <div class="d-flex justify-content-between">
+                <span class="lead fw-bold">Total</span>
+                <span class="fw-bold">$100.67</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <span class="d-inline-block mb-4 fw-bold">Apply discount code:</span>
+          <div class="d-flex mb-12 flex-wrap flex-lg-nowrap align-items-center">
+            <input class="form-control mb-4 mb-md-0 me-6 px-8 py-4 fw-bold border" type="text" placeholder="SUMMER30X">
+            <a class="btn btn-dark py-4 text-uppercase" href="#">Apply</a>
+          </div>
+        </div>
+        <a class="btn btn-primary w-100 text-uppercase" href="#">Confirm</a>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-lg-block position-absolute top-0 end-0 col-lg-5">
+    <div class="py-16 px-6 px-md-14 bg-white">
+      <div class="d-flex mb-12 align-items-center">
+        <h3 class="mb-0">Services summary</h3>
+        <span class="flex-shrink-0 d-inline-flex ms-4 align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 32px; height: 32px;">4</span>
+      </div>
+      <div class="mb-12 pb-16 border-bottom">
+        <div class="row mb-8 align-items-center">
+          <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+            <img class="img-fluid" style="height: 168px; object-fit: contain;"  src="https://i.ibb.co/qpgTwSf/blanket.png" alt="blanket">
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="d-flex justify-content-between">
+              <div class="pe-2">
+                <h3 class="mb-2 lead fw-bold">Blanket Cleaning</h3>
+                <p class="mb-8 text-secondary">Wash & Fold</p>
+              </div>
+              <span class="lead text-info fw-bold">ksh. 300</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                </button>
+                <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-8 align-items-center">
+          <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+            <img class="img-fluid" style="height: 168px; object-fit: contain;"  src="https://i.ibb.co/kSr0JYx/jacket.png" alt="jacket">
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="d-flex justify-content-between">
+              <div class="pe-2">
+                <h3 class="mb-2 lead fw-bold">Jacket Cleaning</h3>
+                <p class="mb-8 text-secondary">Wash & Fold</p>
+              </div>
+              <span class="lead text-info fw-bold">ksh. 50</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                </button>
+                <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-8 align-items-center">
+          <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+            <img class="img-fluid" style="height: 168px; object-fit: contain;"  src="https://i.ibb.co/g74FB2K/Polo.png" alt="Polo">
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="d-flex justify-content-between">
+              <div class="pe-2">
+                <h3 class="mb-2 lead fw-bold">Polo Cleaning</h3>
+                <p class="mb-8 text-secondary">Iron & Fold</p>
+              </div>
+              <span class="lead text-info fw-bold">ksh. 50</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                </button>
+                <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-8 align-items-center">
+          <div class="align-self-stretch col-12 col-lg-3 mb-4 mb-md-0">
+            <img class="img-fluid" style="height: 168px; object-fit: contain;"  src="https://i.ibb.co/dBLWkm1/suit.png" alt="suit">
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="d-flex justify-content-between">
+              <div class="pe-2">
+                <h3 class="mb-2 lead fw-bold">Suit Cleaning</h3>
+                <p class="mb-8 text-secondary">Wash & Iron</p>
+              </div>
+              <span class="lead text-info fw-bold">ksh. 500</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-inline-flex align-items-center px-4 fw-bold text-secondary border rounded-2">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>
+                </button>
+                <input class="form-control m-0 px-2 py-4 text-center text-md-end border-0" style="width: 48px;" type="number" placeholder="1">
+                <button class="btn px-0 py-2">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-12">
+        <div class="mb-10">
+          <div class="py-3 px-10 bg-light rounded-pill">
+            <div class="d-flex justify-content-between">
+              <span class="fw-bold">Subtotal</span>
+              <span class="fw-bold">ksh. 900</span>
+            </div>
+          </div>
+          <div class="py-3 px-10 rounded-pill">
+            <div class="d-flex justify-content-between">
+              <span class="fw-bold">Shipping</span>
+              <span class="fw-bold">ksh. 20</span>
+            </div>
+          </div>
+          <div class="py-3 px-10 rounded-pill">
+            <div class="d-flex justify-content-between">
+              <span class="lead fw-bold">Total</span>
+              <span class="fw-bold">ks. 920</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-10">
+        <span class="d-inline-block mb-4 fw-bold">Apply discount code:</span>
+        <div class="d-flex mb-12 flex-wrap flex-lg-nowrap align-items-center">
+          <input class="form-control mb-4 mb-md-0 me-6 px-8 py-4 fw-bold border" type="text" placeholder="SUMMER30X">
+          <a class="btn btn-dark py-4 text-uppercase" href="#">Apply</a>
+        </div>
+      </div>
+      <a class="btn btn-primary w-100 text-uppercase" href="{% url 'mama_fua:confirm_order' %}">Confirm</a>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

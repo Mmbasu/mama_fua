@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load django_bootstrap5 %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% bootstrap_css %}
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0"
+          name="viewport">
+    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body bgcolor="#A0E7E5">
+
+<header>
+    <div>
+        <section>
+            <nav class="navbar navbar-expand-xl navbar-dark bg-dark flex-wrap">
+                <div class="container-fluid">
+                    <div class="d-flex w-100 align-items-center">
+                        <a class="navbar-brand" href="{% url 'mama_fua:home' %}">
+                            <img class="img-fluid" src="https://i.ibb.co/KxSnLjf/logo.png" alt="logo" width="50" height="50">
+                        </a>
+                        <button class="navbar-burger navbar-toggler bg-primary ms-auto" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse ms-12">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item">
+                                  <a class="nav-link d-flex align-items-center" href="{% url 'mama_fua:home' %}">
+                                      <i class="fa-solid fa-house-chimney fa-lg"></i>
+                                    <span class="small ms-2" style="font-size: 15px;">Home</span>
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link d-flex align-items-center" href="{% url 'mama_fua:create_order' %}">
+                                      <i class="fa-solid fa-shirt fa-lg"></i>
+                                      <span class="small ms-2" style="font-size: 15px;">Laundry Services</span>
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center" href="{% url 'mama_fua:history' %}">
+                                        <i class="fa-solid fa-clock-rotate-left fa-lg"></i>
+                                        <span class="small ms-2" style="font-size: 15px;">History</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link d-flex align-items-center" href="{% url 'mama_fua:cart' %}">
+                                      <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                      <span class="small ms-2" style="font-size: 15px;">Laundry Basket</span>
+                                  </a>
+                                </li>
+
+
+                            </ul>
+                            <ul class="navbar-nav me-6 ms-auto">
+                                <li class="nav-item me-6">
+                                </li>
+                                <li class="nav-item px-0">
+                                </li>
+                            </ul>
+                            <div>
+                                <button class="btn p-0 fw-normal text-end d-flex align-items-center">
+                                    <div class="me-3">
+                                        <p class="mb-0 small text-white" style="font-size: 18px;">Moses Musemi</p>
+                                    </div>
+                                    <div class="me-2">
+                                        <img alt=""
+                                             class="img-fluid rounded-circle"
+                                             src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;crop=faces&amp;fit=crop&amp;h=128&amp;w=128"
+                                             style="width: 40px; height: 40px; object-fit: cover;">
+                                    </div>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="position-relative navbar-menu d-none" style="z-index: 9999;">
+                <div class="navbar-backdrop position-fixed top-0 end-0 bottom-0 start-0 bg-dark"
+                     style="opacity: .5"></div>
+            </div>
+        </section>
+    </div>
+</header>
+
+{% block content %}
+
+{% endblock content %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
