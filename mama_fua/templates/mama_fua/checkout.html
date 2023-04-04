@@ -106,7 +106,7 @@
             </div>
           </div>
           <div class="mb-10">
-            <label class="form-label" for="">Phone Number</label>
+            <label class="form-label" for="">Mpesa Number</label>
             <input class="form-control" type="text">
           </div>
           <div class="mb-10">
@@ -400,9 +400,36 @@
           <a class="btn btn-dark py-4 text-uppercase" href="#">Apply</a>
         </div>
       </div>
-      <a class="btn btn-primary w-100 text-uppercase" href="{% url 'mama_fua:confirm_order' %}">Confirm</a>
+      <a id="confirmBtn" class="btn btn-primary w-100 text-uppercase" href="{% url 'mama_fua:confirm_order' %}">Confirm</a>
     </div>
+    <div id="loadingModal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+            <div class="spinner-border text-primary text-center" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="text-center mt-3">Please wait while we place and Confirm your Order</p>
+            <p class="text-center">If Paying via Mpesa. You shall receive a notification prompting you to pay</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<script>
+function showLoadingModal(event) {
+  event.preventDefault(); // prevent form submission
+  $('#loadingModal').modal('show');
+  setTimeout(function(){
+    window.location.href = event.target.href;
+  }, 5000);
+}
+
+document.querySelector('#confirmBtn').addEventListener('click', showLoadingModal);
+</script>
+
 
 {% endblock content %}
